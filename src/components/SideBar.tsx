@@ -80,7 +80,7 @@ function SideBar({ isCollapsed, handleCollapse }: navBarProps) {
                     <ButtonSideBar icon="bi bi-search" tittle={t("search")} />
                 </Link>
 
-                <Link className="text-decoration-none" to={"/login/"}>
+                <Link className="text-decoration-none" to={"/"}>
                     <button
                         type="button"
                         className="btn position-absolute bottom-0 start-50 translate-middle-x mb-4"

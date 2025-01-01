@@ -49,7 +49,7 @@ function SignUp() {
                 setShowAlert(true);
                 setTimeout(() => {
                     setShowAlert(false);
-                    navigate("/login");
+                    navigate("/");
                 }, 2000);
             } else {
                 setAlertMsj({
