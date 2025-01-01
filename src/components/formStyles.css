@@ -1,0 +1,19 @@
+.cardForm,
+.tableForm,
+.icon_card {
+    transition: all 0.3s ease-in-out;
+}
+.cardForm:hover {
+    transform: scale(1.05);
+    border: solid #437dda68 2px;
+}
+.tableForm:hover {
+    background-color: #437dda68;
+    transition: all 0.3s ease-in-out;
+    margin: 5px 0;
+    border-radius: 15px;
+}
+.icon_card:hover {
+    transform: scale(1.6);
+    transition: all 0.3s ease-in-out;
+}
