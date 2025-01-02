@@ -20,6 +20,7 @@ function ModalFormName({ changeAlertMsj, setShowAlert }: modalAlert) {
             title: title,
             description: description,
         };
+        console.log(newForm);
         try {
             const response = await postForm("forms-info/", newForm);
             changeAlertMsj("Created, you'll redirect", "success");
@@ -68,7 +69,7 @@ function ModalFormName({ changeAlertMsj, setShowAlert }: modalAlert) {
                                 Title
                             </label>
                             <input
-                                type="email"
+                                type="text"
                                 className="form-control"
                                 id="exampleFormControlInput1"
                                 placeholder="Enter title"

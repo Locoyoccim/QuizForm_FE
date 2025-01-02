@@ -13,6 +13,7 @@ function usePutQuestions() {
                     Authorization: `Bearer ${authContext.GetToken()}`,
                 },
             });
+            console.log("response:", response);
             return response.data;
         } catch (err) {
             console.error("Error in putQuestions:", err);

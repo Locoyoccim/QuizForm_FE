@@ -140,7 +140,7 @@ function SignUp() {
                         <Button
                             title={t("back to login")}
                             variant="btn-outline-primary ms-2 border-0"
-                            action={() => navigate("/login")}
+                            action={() => navigate("/")}
                         />
                     </form>
                 </article>

@@ -18,6 +18,7 @@ interface cardProps {
 }
 
 function CardForm({ formProps, setShowAlert, changeAlertMsj, to }: cardProps) {
+    console.log(formProps);
     const { likes } = useGetLikes(`likes/${formProps.id}/`);
     const { postLike } = usePostLikes();
     const [likesCount, setLikes] = useState<number | undefined>();

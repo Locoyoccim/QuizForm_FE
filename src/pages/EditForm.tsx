@@ -15,8 +15,6 @@ function EditForm() {
     const { putQuestions } = usePutQuestions();
     const navigate = useNavigate();
 
-    console.log(form);
-
     useEffect(() => {
         getQuestions(`get-question/${pk}/`);
     }, []);
@@ -32,7 +30,7 @@ function EditForm() {
             ...prevForm,
             {
                 form_title: title?.toString(),
-                question_id: prevForm.length,
+                question_id: prevForm.length + 1,
                 type,
                 question: "",
                 options: type === "option" ? [""] : [],
@@ -81,12 +79,12 @@ function EditForm() {
     const onDragEnd = (result: DropResult) => {
         if (!result.destination) return;
 
-        const items = Array.from(form); // Clona el estado actual
-        const [reorderedItem] = items.splice(result.source.index, 1); // Extrae el ítem movido
-        items.splice(result.destination.index, 0, reorderedItem); // Inserta en la nueva posición
+        const items = Array.from(form); 
+        const [reorderedItem] = items.splice(result.source.index, 1); 
+        items.splice(result.destination.index, 0, reorderedItem); 
     
-        setForm(items); // Actualiza el estado
-        console.log("Updated form:", items); // Valida en consola
+        setForm(items); 
+        console.log("Updated form:", items); 
     };
 
     return (
